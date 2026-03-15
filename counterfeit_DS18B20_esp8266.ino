@@ -48,12 +48,13 @@
  * 
  */
 
+#include <ESP8266WiFi.h>
 // Tested with OneWire Version 2.3
 // https://github.com/PaulStoffregen/OneWire
 #include "OneWire.h"
 
-#define pin_onewire 7
-#define pin_LED 13
+#define pin_onewire D2
+#define pin_LED D4
 #define Comm Serial
 
 const int ms750 = 750;
@@ -93,6 +94,12 @@ bool read_scratchpad(uint8_t *addr, uint8_t *buff9) {
 }
 
 void setup() {
+  // DIsable WiFi for better timing precision
+  WiFi.persistent(false);
+  WiFi.mode(WIFI_OFF);
+  WiFi.forceSleepBegin();
+  delay(10);
+
   Comm.begin(115200);
 
   digitalWrite(pin_LED, HIGH);

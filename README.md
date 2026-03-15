@@ -1,9 +1,10 @@
 Fork of https://github.com/cpetrich/counterfeit_DS18B20 for my personal purposes.
 
-I wanted to study my AliExpress "DS18B20"s, but only had ESP8266 hardware at hand.
+I wanted to study my AliExpress "DS18B20"s, but the .ino sketch is for Arduino and I only had ESP8266 hardware at hand. Miraculously, 
+https://github.com/esp8266/Arduino supportd ESP8266 on Arduino toolchain!
 
-A couple of things needed to be done:
-* Disabling WiFi, because OneWire uses bit-banging, and ESP's WiFi interrupts ruins the timing.
+Just a couple of adjustments needed to be done:
+* Disabling WiFi, because OneWire uses bit-banging, and ESP's WiFi interrupts ruin the timing.
 * Changing default pin assignments to be appropriate for typical ESP8266 boards.
 
 Usage:

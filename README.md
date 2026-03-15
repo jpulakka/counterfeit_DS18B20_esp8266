@@ -1,9 +1,9 @@
 Fork of https://github.com/cpetrich/counterfeit_DS18B20 for my personal purposes.
 
-I wanted to study my AliExpress "DS18B20"s, but I only had ESP8266 hardware at hand.
+I wanted to study my AliExpress "DS18B20"s, but only had ESP8266 hardware at hand.
 
 A couple of things needed to be done:
-* Disabling WiFi, because OneWire uses bit-banging, and ESP's WiFi interrupts ruin the timing.
+* Disabling WiFi, because OneWire uses bit-banging, and ESP's WiFi interrupts ruins the timing.
 * Changing default pin assignments to be appropriate for typical ESP8266 boards.
 
 Usage:

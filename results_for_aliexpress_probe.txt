@@ -8,7 +8,7 @@ This is the November 2024 version of discover-classify_fake_DS18B20.
   appeared on the market between 2019 and 2024. Please consider
   reporting suspicious test results to help keep the sketch current.
 This sketch will test DS18B20 sensors attached to
-  pin 4 for differences with the DS18B20 produced by
+  GPIO 4 for differences with the DS18B20 produced by
   Analog Devices / Maxim Integrated / Dallas Semiconductor.
   Details: https://github.com/cpetrich/counterfeit_DS18B20
 

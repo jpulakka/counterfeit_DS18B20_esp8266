@@ -9,5 +9,5 @@ A couple of things needed to be done:
 Usage:
 1. Install https://github.com/esp8266/Arduino?tab=readme-ov-file#installing-with-boards-manager
 2. Install OneWire https://www.pjrc.com/teensy/td_libs_OneWire.html
-3. Check the pins. By default, D4 a.k.a. pin 2 for LED (as it is on WEMOS D1 mini at least), and D2 a.k.a. pin 4 a.k.a. SDA for OneWire.
+3. Check the pins. By default, D4 a.k.a. GPIO 2 for LED (as it is on WEMOS D1 mini at least), and D2 a.k.a. GPIO 4 a.k.a. SDA for OneWire.
 4. Compile and Upload the sketch, and use Serial Monitor for operating it.

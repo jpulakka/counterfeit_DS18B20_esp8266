@@ -125,7 +125,7 @@ void setup() {
   Comm.println(F("  appeared on the market between 2019 and 2024. Please consider"));
   Comm.println(F("  reporting suspicious test results to help keep the sketch current."));
   Comm.println(F("This sketch will test DS18B20 sensors attached to"));
-  Comm.print(F("  pin "));
+  Comm.print(F("  GPIO "));
   Comm.print(pin_onewire, DEC);
   Comm.println(F(" for differences with the DS18B20 produced by"));
   Comm.println(F("  Analog Devices / Maxim Integrated / Dallas Semiconductor."));

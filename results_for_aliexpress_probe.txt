@@ -1,0 +1,111 @@
+https://www.aliexpress.com/item/1005008223565176.html
+Plastic bag label D101BE24U57
+
+
+--- # counterfeit_DS18B20_esp8266.ino
+This is the November 2024 version of discover-classify_fake_DS18B20.
+  We are in a game of whack-a-mole. At least six new clones have
+  appeared on the market between 2019 and 2024. Please consider
+  reporting suspicious test results to help keep the sketch current.
+This sketch will test DS18B20 sensors attached to
+  pin 4 for differences with the DS18B20 produced by
+  Analog Devices / Maxim Integrated / Dallas Semiconductor.
+  Details: https://github.com/cpetrich/counterfeit_DS18B20
+
+
+Test DS18B20 sensors attached to GPIO 4.
+Select the test:
+  0. Enumerate attached sensors.
+
+  1. Check temperature alarm function with a safe test according to datasheet.
+
+  2. Discover clones with a safe test, using only function codes documented in the datasheet.
+     This may be sufficient to detect clones.
+
+  3. Classify clones with an agressive test, using undocumented function codes.
+     This could conceivably mess up calibration parameters. Only use this on sensors
+     dedicated to testing.
+
+Your choice> 0
+
+Sensor ROM and Current Scratchpad Content:
+   1. 28-97-44-6F-00-00-00-D6, 28-0000006F4497: 50/05/7F/80/7F/FF/0C/10/93 85.00 oC
+  Number of Sensors: 1.
+
+-------------
+
+Test DS18B20 sensors attached to GPIO 4.
+Select the test:
+  0. Enumerate attached sensors.
+
+  1. Check temperature alarm function with a safe test according to datasheet.
+
+  2. Discover clones with a safe test, using only function codes documented in the datasheet.
+     This may be sufficient to detect clones.
+
+  3. Classify clones with an agressive test, using undocumented function codes.
+     This could conceivably mess up calibration parameters. Only use this on sensors
+     dedicated to testing.
+
+Your choice> 2
+
+28-97-44-6F-00-00-00-D6: ROM pattern pre-dates C4 die version, suggesting the chip is either over 15 years old or a clone.
+                         Assuming sensor is a clone. Error.
+  Scratchpad Register: 50/05/7F/80/7F/FF/0C/10/93
+  Info only: Sensor is not reporting Parasite Power Mode. Ok.
+  Info only: Scratchpad bytes 2,3,4 (7F/80/7F): not DS18B20 default values 4B/46/7F.
+  Scratchpad <byte 5> = 0xFF: ok.
+  Scratchpad <byte 6> = 0x0C: ok.
+  Scratchpad <byte 7> = 0x10: ok.
+  Last three bytes of scratchpad after sending 5 bytes: FF/0C/10 ok.
+  Scratchpad config register <byte 4> after writing 0x00: 0x1F ok.
+  Scratchpad config register <byte 4> after writing 0xFF: 0x7F ok.
+  0x4E modifies alarm registers: ok.
+  0x4E accepts 10 bit resolution: ok.
+  0x4E preserves reserved bytes: ok.
+  0x4E accepts 12 bit resolution: ok.
+  0x4E preserves reserved bytes: ok.
+  Checking <byte 6> upon temperature change: ok.
+    Info only: Temperature reading is 20.13 oC.
+  Testing if end of temperature conversion can be polled: ok.
+    Polling status valid immediately: Sensor failed to signal immediately 4 out of 4 times. Error.
+    Conversion speed at different resolutions: 9-bit: 76 ms, 10-bit: 152 ms, 11-bit: 303 ms, 12-bit: 606 ms.
+      Changing resolution possible. Ok.
+      Conversion time doubles with each bit in resolution. Ok.
+      12-bit conversion time as expected. Ok.
+  --> Sensor is not a genuine DS18B20 based on 2 deviations.
+
+------------------------------------------------
+
+Test DS18B20 sensors attachsed to GPIO 4.
+Select the test:
+  0. Enumerate attached sensors.
+
+  1. Check temperature alarm function with a safe test according to datasheet.
+
+  2. Discover clones with a safe test, using only function codes documented in the datasheet.
+     This may be sufficient to detect clones.
+
+  3. Classify clones with an agressive test, using undocumented function codes.
+     This could conceivably mess up calibration parameters. Only use this on sensors
+     dedicated to testing.
+
+Your choice> 3
+
+28-97-44-6F-00-00-00-D6: Family A3 (Clone).
+-------------
+
+Test DS18B20 sensors attached to GPIO 4.
+Select the test:
+  0. Enumerate attached sensors.
+
+  1. Check temperature alarm function with a safe test according to datasheet.
+
+  2. Discover clones with a safe test, using only function codes documented in the datasheet.
+     This may be sufficient to detect clones.
+
+  3. Classify clones with an agressive test, using undocumented function codes.
+     This could conceivably mess up calibration parameters. Only use this on sensors
+     dedicated to testing.
+
+Your choice> 

@@ -4,7 +4,7 @@ I wanted to study my AliExpress "DS18B20"s, but the .ino sketch is for Arduino a
 https://github.com/esp8266/Arduino supports ESP8266 on Arduino environment!
 
 Just a couple of adjustments were needed:
-* Disabling WiFi. OneWire uses bit-banging, and ESP's non-maskable WiFi interrupts ruin the timing. [^1]
+* Disabling WiFi. OneWire uses bit-banging, and ESP's non-maskable WiFi interrupts ruin the timing.[^1]
 * Changing default pin assignments to be appropriate for typical ESP8266 boards.
 
 Usage:
@@ -16,5 +16,5 @@ Usage:
 Example output in [./results_for_aliexpress_probe.txt](results_for_aliexpress_probe.txt). My DS18B20s turned out to be "Family A3 (Clone)", which is "okay" among fakes.
 The important point is to avoid "Family D" or "Family F" garbage.
 
-[^1] OneWire on ESP is good enough for normal "just read the temperature" use with DS18B20s,
+[^1]: OneWire on ESP is good enough for normal "just read the temperature" use with DS18B20s,
   but a DS2482-100 hardware I2C to 1-Wire bridge would be a good idea for critical applications.

@@ -1,6 +1,6 @@
 Fork of https://github.com/cpetrich/counterfeit_DS18B20 for my personal purposes.
 
-I wanted to study some DS18B20s from AliExpress[^1], but the .ino sketch is for Arduino, and I only had ESP8266 hardware at hand. Miraculously, 
+I wanted to study some DS18B20 temperature sensors from AliExpress[^1], but the .ino sketch is for Arduino, and I only had ESP8266 hardware at hand. Miraculously, 
 https://github.com/esp8266/Arduino supports ESP8266 on the Arduino environment!
 
 Just a couple of adjustments were needed:

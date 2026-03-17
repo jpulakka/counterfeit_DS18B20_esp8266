@@ -16,5 +16,5 @@ Usage:
 Example output in [./results_for_aliexpress_probe.txt](results_for_aliexpress_probe.txt). My DS18B20s turned out to be "Family A3 (Clone)", which is "okay" among fakes.
 The important point is to avoid "Family D" or "Family F" garbage.
 
-[^1]: OneWire on ESP is good enough for normal "just read the temperature" use with DS18B20s,
+[^1]: OneWire on ESP is good enough for normal "just read the temperature" use with DS18B20s, even when using WiFi,
   but a DS2482-100 hardware I2C to 1-Wire bridge would be a good idea for critical applications.

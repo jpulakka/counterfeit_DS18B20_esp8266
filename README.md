@@ -14,7 +14,7 @@ Usage:
 4. Select the right board in the IDE and check the pins in the sketch. By default, D4 a.k.a. GPIO 2 for LED (as it is on WEMOS D1 mini at least), and D2 a.k.a. GPIO 4 a.k.a. SDA for OneWire.
 5. Compile and Upload the sketch, and use the Serial Monitor to operate it.
 
-[^1]: Example output in [results_for_aliexpress_probe.txt](results_for_aliexpress_probe.txt). My DS18B20s turned out to be "Family A3 (Clone)", which is "okay" among fakes.
+[^1]: Example output in [results_for_aliexpress_probe.txt](./results_for_aliexpress_probe.txt). My DS18B20s turned out to be "Family A3 (Clone)", which is "okay" among fakes.
 The important point is to avoid "Family D" or "Family F" garbage.
 [^2]: OneWire on ESP is good enough for normal "just read the temperature" use with DS18B20s, even when using WiFi,
   but a DS2484 hardware I2C to 1-Wire bridge would be a good idea for critical applications.
